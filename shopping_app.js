@@ -1,33 +1,56 @@
 $(document).ready(function(){
-    var get_item = [];
-    var new_item;
+    var getItem = [];
+    var newItem;
     var shoppy;
     var remove;
+    var removeInstructions;
 
-$("#list_item").focus();
-
+$("#listItem").focus();
 
 shoppy = function() {
-    new_item = $("#list_item").val();
-    get_item.push(new_item);
-    $("#display_items").append("<li>" + "<button>Del</button>" + new_item + "</li>");
-    $("#list_item").val(""); 
-    $("#list_item").focus();
+    newItem = $("#listItem").val();
+   
+    if(newItem != " ") {
+    getItem.push(newItem);
+    $("#displayItem").append('<li>' + ' <input class = "checkItem" type = "checkbox" > ' +  newItem + '</li>'); 
+    } else {
+        return;
+    }
+
+    $("#listItem").val(""); 
+    $("#listItem").focus();
 };
 
-$('#list_item').keydown(function(e){
-      if (e.keyCode === 13) {
+/* Adding itmes by pressing Enter key. */
+$("#listItem").keydown(function(e){
+    if (e.keyCode === 13) {
         shoppy();
-      }
+    }
 });
 
-$("#add_button").click(function() {
+/* Adding itmes by clicking Add button. */
+$("#addButton").click(function() {
     shoppy();
 });
 
-$("#display_items").click(function() {
-(this).remove();
+/* if checkbox gets checked. */
+/*$("#checkItem").click(function() { */
+if($("checkItem :checked" )) {
+    $(this).css("opacity", ".5");
+}
+/*});*/
+
+/* strikeout items purchased. */
+$("li input.checkItem").change(function() {
+    alert("checkbox clicked");
+    $(this).toggleclass("strike");
 });
 
-
+/* Clear checked items from list.*/
+$("#clearButton").submit(function() {
+    $("checkItem input:checked").parent().remove();     
 });
+
+/* Doc ends.*/
+});
+

@@ -4,18 +4,26 @@
     <link rel = "stylesheet" href = "main.css" type = "css/text">
       
     </head>
-    <body id = "main_container">
-        <h1><img src = "shopping-cart-2.jpg" alt = "" id = "pic"> Shopping List</h1>
-           <div id="instructions">
-                    <strong> Enter first item. </strong>
-                    -- Add items here.
-            <input id = "list_item" placeholder = "" autofocus />
-            <button value = "submit" type = "submit" id = "add_button"> + </button>
+    <body> 
+        <div id = "main_container">
+            <h1> <img src = "shopping-cart-2.jpg" alt = "" id = "pic"> Shopping List </h1>
+
+            <div id = "items">
+                <label>Current List:</label>
+                <ul id = "displayItem"> </ul>
+            </div>
+
+            <form class = "styleForm" action = "#"> 
+                <label> Enter itmes here:</label> 
+                <input id = "listItem" type = "text" />
+                <button value = "submit" type = "submit" id = "addButton"> add</button>
+            </form>
+
+            <form id = "clearItem" action = "#">
+                <button value = "submit" type = "submit" id = "clearButton"> Clear </button>
+            </form>
+
         </div>
-        <div id = "items">
-             <ul id = "display_items">    
-            </ul>
-                </div>
       
         <script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type = "text/javascript" src="shopping_app.js">  </script>

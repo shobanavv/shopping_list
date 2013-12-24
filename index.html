@@ -1,6 +1,6 @@
 <html>
     <head>
-    <title> Shopping Assistance. </title>
+    <title> Shopping List Web App. </title>
     <link rel = "stylesheet" href = "main.css" type = "css/text">
       
     </head>
@@ -8,20 +8,24 @@
         <div id = "main_container">
             <h1> <img src = "shopping-cart-2.jpg" alt = "" id = "pic"> Shopping List </h1>
 
-            <div id = "items">
-                <label>Current List:</label>
-                <ul id = "displayItem"> </ul>
+            <div id = "styleForm"> 
+                <h2> Enter items here:</h2> 
+                <input id = "listItem" type = "text" maxlength = "25" placeholder = "max 25 chars">
+                <button value = "submit" type = "submit" id = "addButton"> Add</button>
+            </div>
+             <div>
+             <output id = "message" ></output>
             </div>
 
-            <form class = "styleForm" action = "#"> 
-                <label> Enter itmes here:</label> 
-                <input id = "listItem" type = "text" />
-                <button value = "submit" type = "submit" id = "addButton"> add</button>
-            </form>
+             <div id = "items">
+                <ul id = "displayItem">
+                <button  id = "checkAll" > Select All </button>
+                <button id = "clearButton"> Clear </button>
+                <button  id = "uncheckAll"> Deselect All </button>
+                
+                </ul>
+            </div>
 
-            <form id = "clearItem" action = "#">
-                <button value = "submit" type = "submit" id = "clearButton"> Clear </button>
-            </form>
 
         </div>
       

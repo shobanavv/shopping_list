@@ -54,24 +54,25 @@ table {
 
 
 body {
-    position: fixed;
-    /* background: url(flowers.jpg) no-repeat;  */
-    background-color: #8CE1D7; 
+    /*background: url(flowers.jpg) no-repeat;  */
+    background-color: #AACCCC; 
+    width:100%; 
 }
 
 input.invalid {
-    background-color: #556677;
+    background-color: #44bbcc;
     border: 2px red inset;
 }
 
 #main_container {
-    margin: 2em 5em 5em 20em;
+    margin: auto;
     width: 600px;
-    min-height: 300px;
+    height: auto;
     border:2px solid #445566;
     text-align: center;
     position: relative;
-    height: auto;
+    background-color: #88AAAA;
+
 }
 
 h1 {
@@ -79,16 +80,24 @@ h1 {
     text-align: center;
     background-color: #ffffff;
     padding-bottom: 10px;
+} 
+
+h2 {
+      font-size: 1.5em;
 }
 
 button {
-    width: 6em;
-    height: 3em;
+   
+    width: 150px;
+    font-size: 15px;
     font-weight:700;
     text-align: center;
     margin-top: 20px;
-    border-radius: 2px;
+    margin-left:20px;
+}
 
+#styleForm {
+    margin:2em;
 }
 
 #pic {
@@ -103,13 +112,6 @@ button {
     height: auto;
 }
 
-/*#instructions {
-    min-width: 2em;
-    text-align: center;
-    font-size: 1.5em;
-    margin: 1em auto;
-}*/
-
 #listItem {
     width: 70%;
     font-size: 1.5em;
@@ -118,10 +120,8 @@ button {
 }
 
 #items {
-    margin:1px;
-    height:100%;
-    width: 50%;
-    overflow: scroll;
+    margin:auto;
+    width: 100%;
 }
 
 li {
@@ -133,6 +133,11 @@ li {
     text-decoration: line-through;
 }
 
-label {
-    font-size: 2em;
+#message {
+    
+    height: 2.5em;
+    width: 80%;
+    font-size: 1.5em;
+    text-shadow: 2px 2px rgba(255, 255, 255, 0.75);
+
 }
